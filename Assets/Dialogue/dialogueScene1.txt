@@ -1,0 +1,16 @@
+Lucas,Where...where am I?
+Doctor,Everything is fine son take it easy
+Doctor,How do you feel?
+Lucas,Fine..I guess..Im a little lightheaded.
+why cant I remember anything?%your amnesia is due to some sort of injury to your head/when I found you, you were passed out near the wall/didn't want to leave you there so I carried you back here and patched you up.[who are you?%My name is Fred, Im the doctor in this part of the town/I frequently patrol the wall to help anyone who might have lingered there for too long/new souls tend to be hopeful in finding a way out, but they will just tranquilize you if even come within 10 feet of the wall[where am I?%This is my office, right on the edge of shaggy town
+Doctor,My guess is that you were sedated near the wall and hit your head on the way down
+Doctor,Your memories should return with time 
+Doctor,..do you recall how you got here son?
+Lucas,no..Its hard to remember anything right now
+Lucas,..I think my name is Lucas?
+Doctor,well ok Lucas, I want you get some more rest now, you're fine to stay here if you want, we'll have to make sure no one finds out...
+Lucas,Why can't anyone find out?
+Doctor,well...your're a human arnt you?
+,*KNOCK KNOCK KNOCK*
+Doctor,Quick! find somewhere to hide
+Doctor,I can't risk anyone seeing you here
