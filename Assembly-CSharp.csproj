@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\classScene\classSceneController.cs" />
     <Compile Include="Assets\Scripts\Prologue\sceneController.cs" />
     <Compile Include="Assets\Scripts\Scene1\doctorController.cs" />
     <Compile Include="Assets\Scripts\Scene1\PlayerController.cs" />

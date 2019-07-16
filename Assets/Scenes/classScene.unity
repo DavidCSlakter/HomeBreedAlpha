@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 98694909}
   - component: {fileID: 98694908}
   - component: {fileID: 98694907}
+  - component: {fileID: 98694911}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -213,8 +214,8 @@ RectTransform:
   - {fileID: 1788577490}
   - {fileID: 1786519551}
   - {fileID: 162197343}
-  - {fileID: 1920442090}
   - {fileID: 1440851399}
+  - {fileID: 1920442090}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -223,6 +224,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &98694911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98694906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b9d539beadcc44d9181c56802b5188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LucasAnimator: {fileID: 1440851402}
 --- !u!1 &162197342
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +248,7 @@ GameObject:
   - component: {fileID: 162197343}
   - component: {fileID: 162197345}
   - component: {fileID: 162197344}
+  - component: {fileID: 162197346}
   m_Layer: 5
   m_Name: Student2
   m_TagString: Untagged
@@ -257,8 +272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -208, y: -282.65}
-  m_SizeDelta: {x: 164.7, y: 337.6}
+  m_AnchoredPosition: {x: -208.6, y: -277.28}
+  m_SizeDelta: {x: 163.3, y: 348.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162197344
 MonoBehaviour:
@@ -297,6 +312,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162197342}
   m_CullTransparentMesh: 0
+--- !u!95 &162197346
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162197342}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8ab25a2f4431214e9cba7c295cdf696, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &813877843 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5015608621794881750, guid: 0ce8bec8886a74e4a9727f987562f243,
@@ -576,6 +610,7 @@ GameObject:
   - component: {fileID: 1440851399}
   - component: {fileID: 1440851401}
   - component: {fileID: 1440851400}
+  - component: {fileID: 1440851402}
   m_Layer: 5
   m_Name: Lucas
   m_TagString: Untagged
@@ -595,7 +630,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 98694910}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -639,6 +674,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440851398}
   m_CullTransparentMesh: 0
+--- !u!95 &1440851402
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440851398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c89cc5a46be6e2f4ebbb9ba3ebb53c48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1786519550
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +704,7 @@ GameObject:
   - component: {fileID: 1786519551}
   - component: {fileID: 1786519553}
   - component: {fileID: 1786519552}
+  - component: {fileID: 1786519554}
   m_Layer: 5
   m_Name: Student1
   m_TagString: Untagged
@@ -713,6 +768,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786519550}
   m_CullTransparentMesh: 0
+--- !u!95 &1786519554
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786519550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6df652ce7847a174a9892e6c5fa2ad91, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1788577489
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +872,7 @@ GameObject:
   - component: {fileID: 1920442090}
   - component: {fileID: 1920442092}
   - component: {fileID: 1920442091}
+  - component: {fileID: 1920442093}
   m_Layer: 5
   m_Name: Teacher
   m_TagString: Untagged
@@ -818,7 +893,7 @@ RectTransform:
   m_Children:
   - {fileID: 813877843}
   m_Father: {fileID: 98694910}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -862,6 +937,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920442089}
   m_CullTransparentMesh: 0
+--- !u!95 &1920442093
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920442089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57812c6dc57995d4bb14daaeec0df773, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2117353771
 GameObject:
   m_ObjectHideFlags: 0
