@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - MenuScreenController
+    - PauseMenu
     - PlayerController
     - QuestionPanelController
     - SceneChanger
@@ -19,10 +20,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -33,6 +32,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/DoctorsOffice.unity:
     - Class: 1
@@ -70,17 +70,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9576}
     - Class: 114
-      Script: {instanceID: 9860}
+      Script: {instanceID: 9862}
     - Class: 114
-      Script: {instanceID: 9942}
+      Script: {instanceID: 9944}
     - Class: 114
-      Script: {instanceID: 10076}
+      Script: {instanceID: 10078}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 10098}
     - Class: 114
-      Script: {instanceID: 10240}
+      Script: {instanceID: 10242}
     - Class: 114
-      Script: {instanceID: 10376}
+      Script: {instanceID: 10378}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -135,25 +135,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9352}
     - Class: 114
-      Script: {instanceID: 9358}
-    - Class: 114
       Script: {instanceID: 9364}
     - Class: 114
       Script: {instanceID: 9372}
     - Class: 114
-      Script: {instanceID: 9408}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 9762}
+      Script: {instanceID: 9644}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 9764}
     - Class: 114
-      Script: {instanceID: 10106}
+      Script: {instanceID: 10098}
     - Class: 114
-      Script: {instanceID: 10240}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10478}
-    - Class: 114
-      Script: {instanceID: 15270}
+      Script: {instanceID: 10480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -206,9 +202,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9372}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 10240}
+      Script: {instanceID: 10098}
+    - Class: 114
+      Script: {instanceID: 10242}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -246,8 +244,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 9282}
+    - Class: 114
+      Script: {instanceID: 9350}
     - Class: 114
       Script: {instanceID: 9352}
     - Class: 114
@@ -259,15 +261,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9860}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 9942}
+      Script: {instanceID: 9862}
     - Class: 114
-      Script: {instanceID: 10002}
+      Script: {instanceID: 9944}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 10004}
     - Class: 114
-      Script: {instanceID: 10240}
+      Script: {instanceID: 10098}
+    - Class: 114
+      Script: {instanceID: 10242}
+    - Class: 114
+      Script: {instanceID: 13634}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -297,7 +303,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: e1d5563b001a3003c944cfe83a210b58
+      Hash: 4515aa23555022d87ca7a907e0785c06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: sceneController
@@ -741,6 +747,12 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: 05fa784fa85394c809fca379e46088d0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuScreenController
+  - hash:
+      serializedVersion: 2
       Hash: 00274a21279f5cb831ce20f895049e38
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -825,7 +837,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: c04f0927ea30a10568efa71313dc5f9e
+      Hash: f31f858eab701fcfc0f110b244ea9286
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: classSceneController
@@ -969,10 +981,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 2ba824b66e1c972c0c58060a74f331b4
+      Hash: c8c5e65e9fb858572516474d6e2102bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MenuScreenController
+    className: PauseMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity

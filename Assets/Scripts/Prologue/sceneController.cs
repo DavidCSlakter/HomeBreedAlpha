@@ -7,31 +7,42 @@ using System.IO;
 
 public class sceneController : MonoBehaviour
 {
+    public Animator BlackScreen;
+    public GameObject CoverScreen;
+    public GameObject title;
+    public GameObject CreatedBy;
+    public GameObject Year;
+
     public Sprite[] prologueImages;
     public Image displayImage;
     public TextMeshProUGUI captionText;
     public Animator sceneAnimator;
     public AudioClip typingSound;
-    public AudioSource typingSource;
+    public AudioSource audioSource;
 
     int imageNumber = 1;
     StreamReader dialogueReader;
     string currentDialogue;
     bool finishedTyping;
-    
+    bool title1 = false;
+    bool title2 = false;
     // Start is called before the first frame update
     void Start()
     {
-        typingSource.clip = typingSound;
+        audioSource.clip = typingSound;
+        audioSource.volume = 0.1f;
 
+        StartCoroutine("delayForSceneFade");
 
         dialogueReader = new StreamReader("Assets/Dialogue/prologueDialogue.txt");
+    }
+
+    void StartPrologue()
+    {
         currentDialogue = dialogueReader.ReadLine();
         currentDialogue = currentDialogue.Trim('-');
-        typingSource.Play();
+        audioSource.Play();
         StartCoroutine("delay");
-
-
     }
 
     // Update is called once per frame
@@ -42,7 +53,6 @@ public class sceneController : MonoBehaviour
             if (finishedTyping)//read another line of dialogue
             {
                 currentDialogue = dialogueReader.ReadLine();
-                print(currentDialogue);
                 if (imageNumber > 6)
                 {
                     sceneAnimator.SetTrigger("FadeOut");
@@ -50,7 +60,7 @@ public class sceneController : MonoBehaviour
                 }
                 else
                 {
-                    typingSource.Play();
+                    audioSource.Play();
                     i = 0;
                     outputString = null;
                     finishedTyping = false;
@@ -91,7 +101,7 @@ public class sceneController : MonoBehaviour
         if (i == (characters.Length - 1))
         {
             finishedTyping = true;
-            typingSource.Stop();
+            audioSource.Stop();
             StopCoroutine("delay");
         }
         i++;
@@ -103,7 +113,7 @@ public class sceneController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(0.05f);
 
             if (!finishedTyping)
             {
@@ -112,5 +122,35 @@ public class sceneController : MonoBehaviour
         }
     }
 
+    IEnumerator delayForSceneFade()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(3.0f);
+
+            if (title2)
+            {
+                CoverScreen.SetActive(false);
+                Year.SetActive(false);
+                BlackScreen.SetBool("FadeOut", false);
+                StartPrologue();
+                StopCoroutine("delayForSceneFade");
+            }
+            else if (title1)
+            {
+                BlackScreen.SetBool("FadeOut", true);
+                
+                title2 = true;
+            }
+            else {
+                title.SetActive(false);
+                CreatedBy.SetActive(false);
+                Year.SetActive(true);
+                BlackScreen.SetBool("FadeOut", false);
+                title1 = true;
+            }
+        }
+        
+    }
    
 }

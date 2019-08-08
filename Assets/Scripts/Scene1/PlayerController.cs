@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
         {
             if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && (transform.localPosition.x > MinX))
             {
-         
                 transform.Translate(-walkingSpeed * Time.deltaTime, 0, 0);
                 anim.SetFloat("Speed", -walkingSpeed);
             }

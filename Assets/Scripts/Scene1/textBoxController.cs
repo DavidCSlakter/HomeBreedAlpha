@@ -25,7 +25,7 @@ public class textBoxController : MonoBehaviour
 
     string currentLine = null;
     string currentDialogue = null;
-    StreamReader reader;
+    public StreamReader reader;
 
     string[] answerLines = new string[0];
     int answerInd = 0;
@@ -64,7 +64,7 @@ public class textBoxController : MonoBehaviour
         StartCoroutine("delay");
     }
 
-    void readNewLine()
+    public void readNewLine()
     {
         currentLine = reader.ReadLine();
         if (currentLine != null)
