@@ -4,26 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
-public class classSceneController : MonoBehaviour
+public class classSceneController : SceneController
 {
-    public GameObject textBox;
-    public GameObject lucasPrompt;
+    
     public Animator LucasAnimator;
     public Animator TeacherAnimator;
     public Text time;
+
     bool schoolsbeenOut;
     bool lucasSitting = true;
     float startTime;
-    textBoxController textBoxScript;
+    
     StreamReader SOreader;
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
+        MaxX = 1050.0f;
+        MinX = -1020.0f;
         schoolsbeenOut = false;
         startTime = Time.time;
         LucasAnimator.SetBool("isSitting", true);
 
-        textBoxScript = (textBoxController)textBox.GetComponent(typeof(textBoxController));
+        
         SOreader = new StreamReader("Assets/Dialogue/SchoolsOut.txt");
 
     }
@@ -39,18 +42,19 @@ public class classSceneController : MonoBehaviour
             }
         }
 
-        if (!textBox.activeSelf)
+        if (!dialogueBox.activeSelf)
         {
             if (lucasSitting)
             {
-                lucasPrompt.SetActive(true);
+                userPrompt.gameObject.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //stand up
+                    LucasAnimator.gameObject.transform.Translate(0, -80f, 0);
                     LucasAnimator.SetBool("isSitting", false);
-                    LucasAnimator.SetFloat("Speed", 0.5f);
                     lucasSitting = false;
-                    lucasPrompt.SetActive(false);
+                    userPrompt.gameObject.SetActive(false);
+                    
                 }
             }
             
@@ -88,7 +92,7 @@ public class classSceneController : MonoBehaviour
         }
 
 
-        if (textBoxScript.characterName.text == "Teacher" && textBox.activeSelf)
+        if (textBoxScript.characterName.text == "Teacher" && dialogueBox.activeSelf)
         {
             TeacherAnimator.SetBool("isTalking", true);
         }
@@ -101,7 +105,7 @@ public class classSceneController : MonoBehaviour
 
     void SchoolsOut()
     {
-        textBox.SetActive(true);
+        dialogueBox.SetActive(true);
         textBoxScript.reader = SOreader;
         textBoxScript.readNewLine();
 

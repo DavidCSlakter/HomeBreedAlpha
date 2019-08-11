@@ -20,8 +20,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -72,15 +74,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9862}
     - Class: 114
-      Script: {instanceID: 9944}
+      Script: {instanceID: 9946}
     - Class: 114
-      Script: {instanceID: 10078}
+      Script: {instanceID: 10082}
     - Class: 114
-      Script: {instanceID: 10098}
+      Script: {instanceID: 10102}
     - Class: 114
-      Script: {instanceID: 10242}
+      Script: {instanceID: 10246}
     - Class: 114
-      Script: {instanceID: 10378}
+      Script: {instanceID: 10382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,11 +147,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9764}
     - Class: 114
-      Script: {instanceID: 10098}
+      Script: {instanceID: 10102}
     - Class: 114
-      Script: {instanceID: 10108}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10480}
+      Script: {instanceID: 10484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,9 +206,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 10098}
+      Script: {instanceID: 10102}
     - Class: 114
-      Script: {instanceID: 10242}
+      Script: {instanceID: 10246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -265,15 +267,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9862}
     - Class: 114
-      Script: {instanceID: 9944}
+      Script: {instanceID: 9940}
     - Class: 114
-      Script: {instanceID: 10004}
+      Script: {instanceID: 9946}
     - Class: 114
-      Script: {instanceID: 10098}
+      Script: {instanceID: 10008}
     - Class: 114
-      Script: {instanceID: 10242}
+      Script: {instanceID: 10082}
     - Class: 114
-      Script: {instanceID: 13634}
+      Script: {instanceID: 10102}
+    - Class: 114
+      Script: {instanceID: 10246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -825,6 +829,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: 5777ab575aa04bd39f7c1fab3d7a6f83
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -837,7 +847,13 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: f31f858eab701fcfc0f110b244ea9286
+      Hash: c729d0300c3fe2b3e25f7cc5d6b5e901
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: doctorOfficeSceneController
+  - hash:
+      serializedVersion: 2
+      Hash: 8b91a4db448670eb1342301574547c45
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: classSceneController
@@ -933,7 +949,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: df731466b4ba2f9b635de9688b89a52c
+      Hash: c729d0300c3fe2b3e25f7cc5d6b5e901
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneController
@@ -979,16 +995,11 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c8c5e65e9fb858572516474d6e2102bc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Prologue.unity
   - Assets/Scenes/classScene.unity
   - Assets/Scenes/DoctorsOffice.unity
-  playerPath: C:/Users/David Slakter/Documents/Home Breed Alpha/Windows/Pet simulator.exe
+  playerPath: C:/Users/David Slakter/Documents/Pet Breed Alpha/Windows/Home Breed
+    Alpha.exe

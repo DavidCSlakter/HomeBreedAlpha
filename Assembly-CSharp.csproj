@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Prologue\sceneController.cs" />
     <Compile Include="Assets\Scripts\Scene1\doctorController.cs" />
+    <Compile Include="Assets\Scripts\Scene1\doctorOfficeSceneController.cs" />
     <Compile Include="Assets\Scripts\Scene1\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Scene1\QuestionPanelController.cs" />
     <Compile Include="Assets\Scripts\Scene1\SceneController.cs" />
