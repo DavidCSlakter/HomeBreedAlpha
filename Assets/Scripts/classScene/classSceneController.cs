@@ -9,9 +9,12 @@ public class classSceneController : SceneController
     
     public Animator LucasAnimator;
     public Animator TeacherAnimator;
+    public Animator Student2Animator;
+    public Animator Student1Animator;
     public Text time;
 
     bool schoolsbeenOut;
+    int  socounter = 0;
     bool lucasSitting = true;
     float startTime;
     
@@ -20,14 +23,14 @@ public class classSceneController : SceneController
     protected override void Start()
     {
         base.Start();
-        MaxX = 1050.0f;
-        MinX = -1020.0f;
+        MaxX = 950f;
+        MinX = -850.0f;
         schoolsbeenOut = false;
         startTime = Time.time;
         LucasAnimator.SetBool("isSitting", true);
 
         
-        SOreader = new StreamReader("Assets/Dialogue/SchoolsOut.txt");
+        SOreader = new StreamReader("Assets/Dialogue/classScene/SchoolsOut.txt");
 
     }
 
@@ -38,7 +41,20 @@ public class classSceneController : SceneController
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                TeacherAnimator.SetTrigger("Disapear");
+                switch (socounter) {
+                    case 0:
+                        TeacherAnimator.SetTrigger("Disapear");
+                        break;
+                    case 2:
+                        Student2Animator.SetTrigger("Disapear");
+                        Student1Animator.SetTrigger("Disapear");
+                        break;
+                    default:
+                        break;
+
+                }
+                socounter++;
+                
             }
         }
 
@@ -47,6 +63,7 @@ public class classSceneController : SceneController
             if (lucasSitting)
             {
                 userPrompt.gameObject.SetActive(true);
+                userPrompt.text = "[E] stand up";
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     //stand up
@@ -62,32 +79,28 @@ public class classSceneController : SceneController
 
         
 
-        if ((Time.time - startTime > 239.5) && (Time.time - startTime < 240.5 ))
+        if ((Time.time - startTime > 209.5) && (Time.time - startTime < 210.5))
         {
             time.text = "3:45";
-            
-        }
-        else if ((Time.time - startTime > 209.5) && (Time.time - startTime < 210.5))
-        {
-            time.text = "3:44";
-        }
-        else if ((Time.time - startTime > 179.5) && (Time.time - startTime < 180.5))
-        {
-            time.text = "3:43";
-        }
-        else if ((Time.time - startTime > 119.9) && (Time.time - startTime < 121.5))
-        {
-            time.text = "3:42";
-
-        }
-        else if ((Time.time - startTime > 59.5) && (Time.time - startTime < 60.1))
-        {
-            time.text = "3:41";
             if (!schoolsbeenOut)
             {
                 schoolsbeenOut = true;
                 SchoolsOut();
             }
+        }
+        else if ((Time.time - startTime > 179.5) && (Time.time - startTime < 180.5))
+        {
+            time.text = "3:44";
+        }
+        else if ((Time.time - startTime > 119.9) && (Time.time - startTime < 121.5))
+        {
+            time.text = "3:43";
+
+        }
+        else if ((Time.time - startTime > 59.5) && (Time.time - startTime < 60.1))
+        {
+            time.text = "3:42";
+            
             
         }
 
@@ -98,9 +111,27 @@ public class classSceneController : SceneController
         }
         else
         {
-            TeacherAnimator.SetBool("isTalking", false); 
+            TeacherAnimator.SetBool("isTalking", false);
         }
-        
+        if (textBoxScript.characterName.text == "Skylar" && dialogueBox.activeSelf)
+        {
+            Student2Animator.SetBool("isTalking", true);
+        }
+        else
+        {
+            Student2Animator.SetBool("isTalking", false);
+        }
+        if (textBoxScript.characterName.text == "Tom" && dialogueBox.activeSelf)
+        {
+            Student1Animator.SetBool("isTalking", true);
+        }
+        else
+        {
+            Student1Animator.SetBool("isTalking", false);
+        }
+
+
+
     }
 
     void SchoolsOut()

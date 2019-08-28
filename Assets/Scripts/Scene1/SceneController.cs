@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
     public GameObject questionBox;
     public GameObject player;
     public TextMeshProUGUI userPrompt;
-    protected textBoxController textBoxScript;
+    public textBoxController textBoxScript;
     protected float MaxX;
     protected float MinX;
 
